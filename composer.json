@@ -1,0 +1,25 @@
+{
+  "name": "artsoft/yii2-comments",
+  "description": "Comments Module For Yii2 Framework",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Taras Makitra",
+      "email": "makitrataras@gmail.com"
+    },
+    {
+      "name": "Artur Markov",
+      "email": "artmarkov@mail.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "artsoft\\comments\\": ""
+    }
+  },
+  "require": {
+    "yiisoft/yii2": "~2.0",
+    "yiidoc/yii2-timeago": "^2.0",
+    "tijsverkoyen/akismet": "^1.1"
+  }
+}
