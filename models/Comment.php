@@ -209,48 +209,24 @@ class Comment extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Get created date
-     *
-     * @param string $format date format
-     * @return string
-     */
-    public function getCreatedDate($format = 'Y-m-d')
+    public function getCreatedDate()
     {
-        return date($format, ($this->isNewRecord) ? time() : $this->created_at);
+        return Yii::$app->formatter->asDate(($this->isNewRecord) ? time() : $this->created_at);
     }
 
-    /**
-     * Get created date
-     *
-     * @param string $format date format
-     * @return string
-     */
-    public function getUpdatedDate($format = 'Y-m-d')
+    public function getUpdatedDate()
     {
-        return date($format, ($this->isNewRecord) ? time() : $this->updated_at);
+        return Yii::$app->formatter->asDate(($this->isNewRecord) ? time() : $this->updated_at);
     }
 
-    /**
-     * Get created time
-     *
-     * @param string $format time format
-     * @return string
-     */
-    public function getCreatedTime($format = 'H:i')
+    public function getCreatedTime()
     {
-        return date($format, ($this->isNewRecord) ? time() : $this->created_at);
+        return Yii::$app->formatter->asTime(($this->isNewRecord) ? time() : $this->created_at);
     }
 
-    /**
-     * Get created time
-     *
-     * @param string $format time format
-     * @return string
-     */
-    public function getUpdatedTime($format = 'H:i')
+    public function getUpdatedTime()
     {
-        return date($format, ($this->isNewRecord) ? time() : $this->updated_at);
+        return Yii::$app->formatter->asTime(($this->isNewRecord) ? time() : $this->updated_at);
     }
 
     /**
