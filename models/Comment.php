@@ -228,6 +228,16 @@ class Comment extends \yii\db\ActiveRecord
     {
         return Yii::$app->formatter->asTime(($this->isNewRecord) ? time() : $this->updated_at);
     }
+    
+    public function getCreatedDatetime()
+    {
+        return "{$this->createdDate} {$this->createdTime}";
+    }
+
+    public function getUpdatedDatetime()
+    {
+        return "{$this->updatedDate} {$this->updatedTime}";
+    }
 
     /**
      * Get author of comment
